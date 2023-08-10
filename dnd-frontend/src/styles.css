@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files */
+/* Sidebar Styles */
+#sidebar-wrapper {
+    min-height: 100vh;
+    width: 250px;
+    overflow-x: hidden;
+  }
+  
+  #sidebar-wrapper .sidebar-heading {
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+  }
+  
+  #sidebar-wrapper .list-group-item {
+    padding: 0.75rem 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    transition: background-color 0.2s;
+  }
+  
+  #sidebar-wrapper .list-group-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Page Content Styles */
+  #page-content-wrapper {
+    min-width: 100vw;
+    padding: 1rem;
+  }
+  
+  /* Toggler Button Styles */
+  #menu-toggle {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    #wrapper.toggled #sidebar-wrapper {
+      width: 0;
+    }
+    #wrapper.toggled #page-content-wrapper {
+      margin-left: 0;
+      min-width: 0;
+    }
+  
+    #menu-toggle {
+      display: block;
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 1000;
+    }
+  
+    #wrapper.toggled #menu-toggle {
+      left: 260px;
+    }
+  }
